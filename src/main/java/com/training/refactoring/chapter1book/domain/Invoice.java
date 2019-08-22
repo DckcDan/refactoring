@@ -10,6 +10,6 @@ public class Invoice {
     private String customer;
     private List<Performance> performances;
 
-    public Invoice(){ }
-
+    public Invoice() {
+    }
 }

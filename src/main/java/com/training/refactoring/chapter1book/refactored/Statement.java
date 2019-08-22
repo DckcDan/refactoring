@@ -1,13 +1,10 @@
 package com.training.refactoring.chapter1book.refactored;
 
 import com.training.refactoring.chapter1book.domain.Invoice;
-import com.training.refactoring.chapter1book.domain.Performance;
-import com.training.refactoring.chapter1book.domain.Play;
 import com.training.refactoring.chapter1book.domain.Plays;
 
 import java.text.NumberFormat;
 import java.util.Locale;
-import java.util.stream.Collectors;
 
 import static java.lang.String.format;
 

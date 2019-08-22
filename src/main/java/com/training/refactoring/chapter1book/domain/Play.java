@@ -11,6 +11,6 @@ public class Play {
     private String name;
     private String type;
 
-    public Play(){}
-
+    public Play() {
+    }
 }

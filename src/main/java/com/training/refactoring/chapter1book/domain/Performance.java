@@ -7,5 +7,6 @@ public class Performance {
     private String playID;
     private int audience;
 
-    public Performance(){ }
+    public Performance() {
+    }
 }

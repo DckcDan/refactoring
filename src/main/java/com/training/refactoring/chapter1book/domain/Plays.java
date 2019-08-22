@@ -9,10 +9,11 @@ public class Plays {
 
     private List<Play> plays;
 
-    public Play getPlay(String playID) {
-        return plays.stream().filter(f -> f.getPlayId().equalsIgnoreCase(playID))
-                .findFirst().orElseThrow(() -> new RuntimeException("Playid not found "+ playID));
+    public Plays() {
     }
 
-    public Plays(){}
+    public Play getPlay(String playID) {
+        return plays.stream().filter(f -> f.getPlayId().equalsIgnoreCase(playID))
+                .findFirst().orElseThrow(() -> new RuntimeException("Playid not found " + playID));
+    }
 }

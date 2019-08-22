@@ -8,11 +8,10 @@ import com.training.refactoring.chapter1book.domain.Plays;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import static java.lang.String.format;
-
 
 /**
  * Statement class from Martin´s refactoring book translated to java.
+ *
  * @author Daniel Morales
  */
 public class Statement {

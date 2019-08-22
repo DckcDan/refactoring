@@ -49,6 +49,7 @@ public class StatementProcessor {
                 .mapToInt(PerformanceData::getVolumeCredits)
                 .sum();
     }
+
     private int amountFor(PerformanceData perf) {
         int result = 0;
         switch (perf.getPlay().getType()) {
