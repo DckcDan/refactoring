@@ -1,0 +1,19 @@
+{
+"plays":[
+  {
+    "playId": "hamlet",
+    "name": "Hamlet",
+    "type": "tragedy"
+  },
+  {
+    "playId": "as-like",
+    "name": "As You Like It",
+    "type": "comedy"
+  },
+  {
+    "playId": "othello",
+    "name": "Othello",
+    "type": "tragedy"
+  }
+]
+}
