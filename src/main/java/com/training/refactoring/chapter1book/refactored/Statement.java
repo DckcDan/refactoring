@@ -11,13 +11,18 @@ import static java.lang.String.format;
 
 public class Statement {
 
+    private StatementProcessor statementProcessor;
+
+    public Statement(StatementProcessor statementProcessor) {
+        this.statementProcessor = statementProcessor;
+    }
 
     public String statement(Invoice invoice, Plays plays) {
-        return renderPlainText(new StatementProcessor().createStatementData(invoice, plays));
+        return renderPlainText(statementProcessor.createStatementData(invoice, plays));
     }
 
     public String htmlStatement(Invoice invoice, Plays plays) {
-        return renderHtml(new StatementProcessor().createStatementData(invoice, plays));
+        return renderHtml(statementProcessor.createStatementData(invoice, plays));
     }
 
     private String renderPlainText(StatementData statementData) {

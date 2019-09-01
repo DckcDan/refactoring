@@ -14,7 +14,7 @@ public class RefactoredStatementTest {
     private static Invoice invoice;
     private static Plays plays;
 
-    private Statement statement = new Statement();
+    private Statement statement = new Statement(new StatementProcessor());
 
     @BeforeClass
     public static void setUp() throws Exception {
