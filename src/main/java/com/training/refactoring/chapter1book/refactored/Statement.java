@@ -31,7 +31,7 @@ public class Statement {
         for (PerformanceData perf : statementData.getPerformances()) {
             result.append(format("  %s:  %s (%s seats)\n", perf.getPlay().getName(), usd(perf.getAmount()), perf.getAudience()));
         }
-        result.append(format("Amount owed is %s", usd(statementData.getTotalAmount())));
+        result.append(format("Amount owed is %s", usd(statementData.getTotalAmount()))+". ");
         result.append(format("You earned %s credits\n", statementData.getTotalVolumeCredits()));
 
         return result.toString();

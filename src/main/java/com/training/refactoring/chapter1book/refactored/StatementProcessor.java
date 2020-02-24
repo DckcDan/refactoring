@@ -7,11 +7,11 @@ import com.training.refactoring.chapter1book.domain.Plays;
 
 import java.util.stream.Collectors;
 
+import static com.training.refactoring.chapter1book.refactored.EventType.COMEDY;
 import static java.lang.String.format;
 
 
 public class StatementProcessor {
-
 
     /**
      * Split Phase technique divide the logic into two parts: one that calculates the data required for the statement,
@@ -52,14 +52,14 @@ public class StatementProcessor {
 
     private int amountFor(PerformanceData perf) {
         int result = 0;
-        switch (perf.getPlay().getType()) {
-            case "tragedy":
+        switch (EventType.getEventType(perf.getPlay().getType())) {
+            case TRAGEDY:
                 result = 40000;
                 if (perf.getAudience() > 30) {
                     result += 1000 * (perf.getAudience() - 30);
                 }
                 break;
-            case "comedy":
+            case COMEDY:
                 result = 30000;
                 if (perf.getAudience() > 20) {
                     result += 10000 + 500 * (perf.getAudience() - 20);
@@ -77,7 +77,9 @@ public class StatementProcessor {
     private int volumeCreditsFor(PerformanceData perf) {
         int result = 0;
         result += Math.max(perf.getAudience() - 30, 0);
-        if ("comedy".equalsIgnoreCase(perf.getPlay().getType())) result += perf.getAudience() / 5;
+        if (COMEDY.equals(EventType.getEventType(perf.getPlay().getType()))) {
+            result += perf.getAudience() / 5;
+        }
         return result;
     }
 
